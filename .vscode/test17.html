@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="btnStart" value="    시작    " onclick="doStart()">
+</body>
+<script>
+    let gn;
+    let timer;
+    function doStart() {
+        // 5부터 시작해서 1초에 한 번씩 숫자가 감소해서
+        // 5..4..3..2..1.. 시작. 표시하고 정지하는 코드
+        // setInterval, clearInterval 이용.
+        gn=5;
+        timer=setInterval(showText,1000);
+    }
+    function showText() {
+        console.log(gn);
+        if(gn<1) {
+            clearInterval(timer);
+            document.getElementsByName("btnStart")[0].value="    시작    ";
+            return;
+        }
+        document.getElementsByName("btnStart")[0].value=gn;
+        gn--;
+    }
+</script>
+</html>

@@ -17,9 +17,9 @@
     function getResult() {
         alert("Interval Timer가 시작합니다.");
         gn=2;
-        timer=setInterval(showText,2000);
+        timer=setInterval(showText,2000); // call-back - 직접 호출이 아니고, 실행을 등록 해놓고 조건에 맞으면 웹 브라우저가 실행.
     }
-    function showText() {
+    function showText() { // 익명함수(Anonymous Function)
         console.log(gn);
         document.getElementsByName('point')[0].value=gn+"초가 지났습니다.";
         gn+=2;
