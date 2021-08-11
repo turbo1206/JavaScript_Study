@@ -31,6 +31,7 @@
     // function doChange() {
     //     console.log("change")
     // }
+
     $(document)
     .ready(function(){
         $('#point').val(50);
@@ -47,6 +48,8 @@
     .on('click','#btnClear',function(){
         // point text안을 비운다.
         $('#point').val("");
+        $('#btnClear').hide();
+        $('#btnShow').show();
         // console.log('btnPoint 클릭');
     })
     // $(document).on();
