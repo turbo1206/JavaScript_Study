@@ -34,10 +34,14 @@
     $(document)
     .ready(function(){
         $('#point').val(50);
+        $('#btnClear').hide(); //fadeOut(1000);
+        
     })
     .on('click','#btnShow',function(){
         // point text 안에 100을 표시.
         $('#point').val(100);
+        $('#btnShow').hide(); //fadeOut();
+        $('#btnClear').show(); //fadeIn();
         // console.log('btnShow 클릭');
     })
     .on('click','#btnClear',function(){
@@ -53,5 +57,6 @@
     $('#btnPoint').click(function(){
         console.log('btnPoint 클릭');
     })
+    
 </script>
 </html>
