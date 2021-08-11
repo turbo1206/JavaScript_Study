@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="     시작     " name="btnGo" id="btnGo"><br>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    // function doStart() {
+    //     $(document)
+    //     .on('click','#btnGo',function(){
+    //         alert('doShow');
+    //     })
+    // }
+    $(document)
+    .on('click','#btnGo',doShow);
+    function doShow() {
+        gn=5;
+        timer=setInterval(function(){
+        $('#btnGo').val(gn);
+        gn--;
+        if(gn<0) {
+            clearInterval(timer);
+            $('#btnGo').val("     시작     ");
+            return;
+            }   
+        },1000);
+    }
+</script>
+</html>

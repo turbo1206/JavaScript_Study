@@ -21,6 +21,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
+    // 20210811 설명
     // function doStop() {
     //     console.log("doStop");
     // }
@@ -31,6 +32,9 @@
     //     console.log("change")
     // }
     $(document)
+    .ready(function(){
+        $('#point').val(50);
+    })
     .on('click','#btnShow',function(){
         // point text 안에 100을 표시.
         $('#point').val(100);
