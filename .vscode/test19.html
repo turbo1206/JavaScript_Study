@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    점수:<input type="text" name="point" id="point"><br>
+    <input type="button" id="btnShow" value="Show">
+    <input type="button" id="btnClear" value="Clear"><br>
+   
+<!-- 이벤트(event)
+     blur: focus가 떠났을 때 
+     click: 마우스 왼쪽 버튼이 클릭 됐을 때
+     dlbclick: 마우스 왼쪽 버튼이 더블 클릭 됐을 때
+     change: html tag안의 값이 변경 됐을 때
+     focus : 마우스 왼쪽 버튼이 눌려서 focus가 들어왔을 때
+-->
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    // function doStop() {
+    //     console.log("doStop");
+    // }
+    // k=document.getElementsByName('point')[0].value;
+    // $('#point').val(50);
+    // k=$('#point').val();
+    // function doChange() {
+    //     console.log("change")
+    // }
+    $(document)
+    .on('click','#btnShow',function(){
+        // point text 안에 100을 표시.
+        $('#point').val(100);
+        // console.log('btnShow 클릭');
+    })
+    .on('click','#btnClear',function(){
+        // point text안을 비운다.
+        $('#point').val("");
+        // console.log('btnPoint 클릭');
+    })
+    // $(document).on();
+    // $(document).on().on()
+    $('#btnCalc').click(function(){
+        console.log('btnCalc 클릭');
+    })
+    $('#btnPoint').click(function(){
+        console.log('btnPoint 클릭');
+    })
+</script>
+</html>
