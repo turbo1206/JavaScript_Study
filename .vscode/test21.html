@@ -38,7 +38,8 @@ $(document)
     } else if($("#female").is(":checked")){
         str4="female";
     } else {
-        str3="";
+        // str3="";
+        alert("성별을 지정하십시오.");
     }    
     str4=$("#txtNum").val();
     str5="";
@@ -50,15 +51,21 @@ $(document)
     }
     if($("#climbing").is(":checked")){
         str5+="등산";
+        
+    }
+    if(str5=='') {
+        alert('취미를 최소한 하나 알려주십시오.');
+        return false;
     }
     str6=$("#txtAddress").val();
     str7=$("#selNation").val();
     str=str1+"<br>"+str2+"<br>"+str3+"<br>"+str4+"<br>"+str5+"<br>"+str6+"<br>"+str7;
     //$("#dvShow").text(str);
     $("#dvShow").html(str);
+    return false; // prevent control from bubbling
 })
     .on('click','#btnWrite',function(){
-        $('#txtName').val('Eunbi')
+        $('#txtName').val('Yeonseo')
         $('#txtHidden').val('숨겨라')
         $('#female').prop('checked', true)
         $('#txtNum').val(150)
@@ -67,9 +74,11 @@ $(document)
         $('#climbing').prop('checked', true)
         $('#txtAddress').val('천안시 동남구 대흥동 125 백자빌딩')
         $('#selNation').val('US')
+        return false;
         })
     .on('blur','#txtName',function(){
         alert($(this).val());
+        return false;
     })
 </script>
 </html>
