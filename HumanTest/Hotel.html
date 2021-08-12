@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="C:\Users\turbo\Desktop\workspace\HumanTest\style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel</title>
+    <title>객실관리</title>
 </head>
-
+    <h1>객실관리</h1>
 <body>
-    <input type="button" name="room" id="room" value="객실관리">
-    <input type="button" name="check" id="check" value="예약관리"><br><br>
-    숙박기간 <input type="text">~
-    <input type="text"><br><br>
-    객실분류 <select name="객실분류">
-        <option value="선택하시오.">선택하시오.</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
-    <input type="button" name="find" id="find" value="찾기"><br><br>
-    
+    <input type="button" value="객실관리">
+    <input type="button" value="예약관리"><br><br>
+    예약가능
+    <label for="room_list">객실목록</label>
+          <p>
+            <textarea name="" id="room_list" cols="10" rows="20">
+              한라산
+              백두산
+              관악산
+              남산
+              수명산
+              태조산
+            </textarea>
+          </p>
+    객실이름 <input type="text"><br>
+    숙박기간 <input type="text">~<input type="text"><br>
+    숙박인원 <input type="text">명<br>
+    1박비용 <input type="text">원<br>
+    총 숙박비 <input type="text">원<br>
+    예약자 모바일 <input type="text"><br><br>
+    <input type="button" value="등록">
+    <input type="button" value="취소">
+    <input type="button" value="Clear"><br><br>
+    <label for="room_list">예약 된 객실</label><br>
+          <p>
+            <textarea name="" id="room_list" cols="10" rows="20">
+              광덕산
+              흑성산
+              태조산
+              관악산
+            </textarea>
+          </p>
 </body>
-
 </html>
