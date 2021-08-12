@@ -32,6 +32,7 @@
             str3='';
         }
         str4=$('#txtNum').val();
+        str='';
         if($('#movie').is(':checked')) {
             str5='영화보기';
         }
@@ -41,6 +42,10 @@
         if($('#climbing').is(':checked')) {
             str5+='등산';
         }
+        str6=$('#txtAddress').val();
+        str7=$('#selNation').val();
+        str=str1+'<br>'+str2+'<br>'+str3+'<br>'+str4+'<br>'+str5+'<br>'+str6+'<br>'+str7;
+        $('#dvShow').html(str);
     })
 </script>
 </html>
