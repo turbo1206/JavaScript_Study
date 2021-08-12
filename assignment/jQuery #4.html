@@ -7,13 +7,13 @@
     <title>jQuery #4</title>
 </head>
 <body>
-    모바일번호&nbsp;&nbsp;<input type="text" id="mobileNumber"><br>
+    모바일번호&nbsp;&nbsp;<input type="number" id="mobileNumber"><br>
     이름(실명)&nbsp;&nbsp;&nbsp;<input type="text" id="userName"><br>
     성별&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" name="gender" id="male">남성&nbsp;
     <input type="radio" name="gender" id="female">여성<br>
     생일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" id="birthday"><br>
+    <input type="date" id="birthday"><br>
     거주지역&nbsp;&nbsp;&nbsp;
         <select id="residence" size="">
         <option value="경기">경기도</option>
@@ -54,10 +54,26 @@
     <button id="btnShow">보기</button>
     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
     <button id="btnWrite">지우기</button>
+    <br><br><br><br>
+    <div id=dvShow style="background-color: rgb(0, 255, 234);width:300px;height:200px;"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
 $(document)
-
+.on("click","#btnShow",function(){
+    str1=$("#mobileNumber").val();
+    if($("#mobileNumber").val("")) {
+        alert("모바일번호를 입력하십시오.");
+    }
+    str2=$("#userName").val();
+    if($("#male").is(":checked")){
+        str3="male";
+    } else if($("#female").is(":checked")){
+        str4="female";
+    } else {
+        // str3="";
+        alert("성별을 지정하십시오.");
+    }    
+})
 </script>
 </html>
