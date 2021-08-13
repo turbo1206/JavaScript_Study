@@ -73,7 +73,58 @@ $(document)
     } else {
         // str3="";
         alert("성별을 지정하십시오.");
-    }    
+    }
+    //관심분야
+    str5="";
+    if($("#재테크").is(":checked")){
+        str5="재테크";
+    }
+    if($("#부동산").is(":checked")){
+        str5+="부동산";
+    }
+    if($("#주식").is(":checked")){
+        str5+="주식";
+    }
+    if($("#채권").is(":checked")){
+        str5="채권";
+    }
+    if($("#선물").is(":checked")){
+        str5+="선물";
+    }
+    if($("#해외투자").is(":checked")){
+        str5+="해외투자";
+    }
+    if($("#공모주").is(":checked")){
+        str5+="공모주";
+    }
+    if(str5=='') {
+        alert('관심분야를 최소한 하나 알려주십시오.');
+        return false;
+    }
+    //취미
+    str6="";
+    if($("#골프").is(":checked")){
+        str6="골프";
+    }
+    if($("#수영").is(":checked")){
+        str6+="수영";
+    }
+    if($("#피트니스").is(":checked")){
+        str6+="피트니스";
+    }
+    if($("#등산").is(":checked")){
+        str6="등산";
+    }
+    if($("#영화").is(":checked")){
+        str6+="영화";
+    }
+    if($("#라이딩").is(":checked")){
+        str6+="라이딩";
+    }
+    if(str6=='') {
+        alert('취미를 최소한 하나 알려주십시오.');
+        return false;
+    }
 })
 </script>
 </html>
