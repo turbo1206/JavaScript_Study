@@ -32,12 +32,15 @@
         return false; // stop bubbling
     })
     .on('click','#btnRemove',function(){ // event handler
-        $('#tbl').find('tr:first').remove();
+        // $('#tbl').find('tr:first').remove();
+        $('#tbl').find('tr:eq(3)').remove();
+        // :first       :eq(n)      :last
         return false;
     })
     .on('click','#btnPrepend',function(){
-        n=1;
-        $('#tbl').prepend('<tr><td>'+(n++)+'</td><td>'+(n++)+'</td><td>'+(n++)+'</td></tr>');
+        // n=1;
+        // $('#tbl').prepend('<tr><td>'+(n++)+'</td><td>'+(n++)+'</td><td>'+(n++)+'</td></tr>');
+        
         return false;
     })
 </script>
