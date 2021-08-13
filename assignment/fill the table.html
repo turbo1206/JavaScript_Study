@@ -6,7 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th {
+        bottom: 1px solid white;
+        background-color: black;
+        color: yellow;   
+    }
+    td {
+        width: 100px;
+        height: 50px;
+        bottom: 1px solid black;
+    }
+</style>
 <body>
-    
+    <table border="1" id="tbl">
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </table><br>
+    <input type="button" id="btnGo" value="채우기">
 </body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    var n;
+    $(document)
+    .ready(function(){
+    })
+    .on('click','#btnGo',function(){
+        $('#tbl').find('tr:eq(0) td:eq(0)').text('1');
+        $('#tbl').find('tr:eq(0) td:eq(1)').text('2');
+        $('#tbl').find('tr:eq(0) td:eq(2)').text('3');
+        $('#tbl').find('tr:eq(0) td:eq(3)').text('4');
+        $('#tbl').find('tr:eq(0) td:eq(4)').text('5');
+        $('#tbl').find('tr:eq(1) td:eq(0)').text('6');
+        $('#tbl').find('tr:eq(1) td:eq(1)').text('7');
+        $('#tbl').find('tr:eq(1) td:eq(2)').text('8');
+        $('#tbl').find('tr:eq(1) td:eq(3)').text('9');
+        $('#tbl').find('tr:eq(1) td:eq(4)').text('10');
+        $('#tbl').find('tr:eq(2) td:eq(0)').text('11');
+        $('#tbl').find('tr:eq(2) td:eq(1)').text('12');
+        $('#tbl').find('tr:eq(2) td:eq(2)').text('13');
+        $('#tbl').find('tr:eq(2) td:eq(3)').text('14');
+        $('#tbl').find('tr:eq(2) td:eq(4)').text('15');
+        $('#tbl').find('tr:eq(3) td:eq(0)').text('16');
+        $('#tbl').find('tr:eq(3) td:eq(1)').text('17');
+        $('#tbl').find('tr:eq(3) td:eq(2)').text('18');
+        $('#tbl').find('tr:eq(3) td:eq(3)').text('19');
+        $('#tbl').find('tr:eq(3) td:eq(4)').text('20');
+        return false; // Stop bubbling
+    })
+</script>
 </html>
