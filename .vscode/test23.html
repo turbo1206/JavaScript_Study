@@ -6,17 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th {
+        bottom: 1px solid white;
+        background-color: black;
+        color: yellow;   
+    }
+    td {
+        width: 100px;
+        height: 50px;
+        bottom: 1px solid black;
+    }
+</style>
 <body>
+    <input type="text" name="txtName" value="블랙핑크"><br>
+    <input type="radio" name="txtGender">성별<br>
+    <input type="checkbox" name="chkName">체크박스<br>
+    <table border="1">
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    </table><br>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
-$(document)
-.ready(function(){
-    $('body').append('휴먼교육센터')
-    $('#tbl tr:eq(1) td:eq(0) input')
-    // #:id, .:class, :tag
-    $('#tbl') // id가 tbl인 element
-    $('.board') // class가 board인걸 가진 element
-})
+    var bcolor;
+    $(document)
+    .ready(function(){ // webpage load 직후에 실행.
+        $('table tr').even().css('background-color','cyan');
+    })
+    .on('mouseenter','table tr',function(){
+        bcolor=$(this).css('background-color');
+        console.log(bcolor);
+        $(this).css('background-color','brown');
+        return false;
+    })
+    .on('mouseleave','table tr',function(){
+        $(this).css('background-color',bcolor);
+        return false;
+    })
+    // 테이블에서 클릭하면 클릭한 TD에 숫자가 표시.
+    // 단, TD에 이미 숫자가 있으면 아무것도 안함.
 </script>
 </html>
