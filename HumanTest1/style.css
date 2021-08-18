@@ -1,0 +1,20 @@
+.left {
+    width: auto;
+    height: auto;
+    float: left;
+}
+.center {
+    width: auto;
+    height: auto;
+    float: left;
+}
+.right{
+
+    width: auto;
+    height: auto;
+    float: left;
+    margin-bottom: 100px;
+}
+.text_size{
+    float: none;
+}
